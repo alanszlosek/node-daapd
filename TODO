@@ -1,6 +1,8 @@
+- walk music folder on startup
+- eventually cache song info in sqlite to cut down on memory usage
 
+OLD TODO
 
 - mcti fehlt im mlit in apso response
-
 - make the project based around express
 - after mlog response write FPLY STUFF
