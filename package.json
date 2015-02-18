@@ -22,7 +22,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "mdns": "2.2.6",
-    "async": "~0.2.9",
+    "mdns": "2.2.6"
   }
 }
