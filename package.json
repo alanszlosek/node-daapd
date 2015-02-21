@@ -22,6 +22,8 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "mdns": "2.2.6"
+    "mdns": "2.2.6",
+    "walk": "2.3.9",
+    "musicmetadata": "0.6.6"
   }
 }
