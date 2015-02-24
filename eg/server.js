@@ -28,6 +28,8 @@ walker.on("file", function (root, fileStats, next) {
   // For now, we'll support jpg covert art, mp3 and flac files
   if (fileStats.name.match(/\.mp3$/i)) {
     format = 'mp3';
+  } else if (fileStats.name.match(/\.ogg$/i)) {
+    format = 'ogg';
   } else if (fileStats.name.match(/\.flac$/i)) {
     format = 'flac';
   } else if (fileStats.name.match(/cover\.jpg$/i)) {
