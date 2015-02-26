@@ -9,5 +9,5 @@ It only takes one argument, the music folder to serve music from. Start the serv
 
 ## What I'm working on
 
-- Finding more things to optimize and clean up, especially with regard to dmap and binary logic
+- Seeing if there are other things that can be optimized, perhaps dmap and binary logic
 - Caching song info in sqlite3 to cut down on memory usage and startup time
