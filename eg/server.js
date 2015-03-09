@@ -34,7 +34,7 @@ walker.on("file", function (root, fileStats, next) {
     format = 'flac';
   } else if (fileStats.name.match(/cover\.jpg$/i)) {
     // covert art
-    format = 'jpg';
+    //format = 'jpg';
   }
   if (format) {
     song = new Song(
