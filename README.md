@@ -11,4 +11,4 @@ It only takes one argument, the music folder to serve music from. Start the serv
 
 - Seeing if there are other things that can be optimized, perhaps dmap and binary logic
 - Caching song info in sqlite3 to cut down on memory usage and startup time
-- Track number isn't showing in iTunes
+- banshee keeps requesting /update
