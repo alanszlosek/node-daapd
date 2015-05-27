@@ -11,7 +11,8 @@ if (!directory) {
   return;
 }
 
-var songMap = {};
+var previousSongMap = {}; // we read songs.json into here on startup
+var songMap = {}; // holds intersection of previousSongMap/songs.json and filesystem contents
 var songs = [];
 var songsChanged = false;
 
@@ -57,11 +58,12 @@ var cache = metadataCache(
   },
   // Read callback
   function(root, fileStats, callback) {
-    // Do we have this file in our JSON cache?
     var file = root + '/' + fileStats.name;
-    if (file in songMap) {
-      callback(songMap[file]);
-      songs.push(songMap[file]);
+    // Do we have this file in our JSON cache?
+    if (file in previousSongMap) {
+      var song = songMap[file] = previousSongMap[file];
+      callback(song);
+      songs.push(song);
     } else {
       callback(null);
     }
@@ -83,21 +85,19 @@ var persistSongs = function() {
 
 fs.stat('./songs.json', function(err, stats) {
   if (!err) {
-    songMap = require('./songs.json');
+    previousSongMap = require('./songs.json');
   } else {
     console.log('songs.json cache not found');
-    songs = [];
   }
 
   cache.addFolder(
     directory,
     function() {
-      
+      previousSongMap = {}; // When we're done walking the music folder, there's no need for the old songs.json contents
       daap.createServer({
         advertise: true,
         songs: cache.getAll()
       }).listen(3689);
-
 
       setInterval(persistSongs, 5000);
     }
