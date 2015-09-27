@@ -1,0 +1,12 @@
+[Unit]
+Description=node.js iTunes/daap server
+After=network.target
+
+[Service]
+User=alan
+Group=users
+WorkingDirectory=/home/alan/projects/node-daapd
+#Environment=DEBUG=*
+SyslogIdentifier=node-daapd
+ExecStart=/usr/bin/node index.js /home/alan/Music
+Restart=always
