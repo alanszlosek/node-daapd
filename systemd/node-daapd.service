@@ -10,3 +10,6 @@ WorkingDirectory=/home/alan/projects/node-daapd
 SyslogIdentifier=node-daapd
 ExecStart=/usr/bin/node index.js /home/alan/Music
 Restart=always
+
+[Install]
+WantedBy=multi-user.target
