@@ -3,7 +3,10 @@ node-daapd
 
 A DAAP Server written for Node.js
 
-Required modules: mdns, walk, musicmetadata (for reading metadata from mp3, ogg, flac files)
+Make sure you have: python2, gcc, make, nss-mdns, avahi. You may also need to install dbus and libavahi-compat-libdnssd-dev.
+Make sure avahi is running. On arch linux, I had to restart dbus.
+
+Required npm modules: mdns, walk, musicmetadata (for reading metadata from mp3, ogg, flac files)
 
 It only takes one argument, the music folder to serve music from. Start the server with: `node index.js MUSICFOLDER`
 
