@@ -70,7 +70,7 @@ var addFolder = function(folder, callback) {
             next();
           }
           // Did musicmetadata find any metadata?
-          songMap[song.filepath] = song;
+          songMap[song.file] = song;
           songs.push(song);
           songsChanged = true;
 
