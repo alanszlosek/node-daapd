@@ -21,9 +21,10 @@
   "author": "Felix Fichte, Alan Szlosek",
   "license": "MIT",
   "readmeFilename": "README.md",
+  "engines": {"node": ">=6.0.0"},
   "dependencies": {
-    "mdns": "^2.2.10",
-    "musicmetadata": "^2.0.2",
-    "walk": "2.3.9"
+    "mdns": "^2.3.3",
+    "musicmetadata": "^2.0.5",
+    "walk": "^2.3.9"
   }
 }
