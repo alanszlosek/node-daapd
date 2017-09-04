@@ -125,7 +125,7 @@ if (directory[0] != '/') {
           songs: songs
         }).listen(3689);
 
-        setInterval(persistSongs, 5000);
+        setTimeout(persistSongs, 5000);
       }
     );
 
